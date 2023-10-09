@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#score{
+    display: flex;
+    justify-content: space-between;
+}
+#score > div {
+    margin: 20px;
+    padding: auto;
+    color: white;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 4px;
+    margin: 20px auto;
+    width: 306px;
+}
+
+.square {
+    margin: auto;
+    padding: auto;
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    border: solid 2px white;
+    max-block-size: 100px
+    
+    
+}
+
+.rotate-animation {
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+.square.winner {
+    background-color: #ffcc00; 
+    color: black; 
+    border-color: #ff0000;
+}
+.square.player-X {
+    background-color: rgb(114, 16, 226);
+}
+.square:active{
+    width: 90px;
+    height: 90px;
+}
+
+#status {
+    color: #007ba0;
+    font-weight: bold;
+}
+
+#reset {
+    background-color: #0030b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#reset:hover {
+    background-color: #54026d;
+}
+#resetScore {
+    background-color: #0030b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#resetScore:hover {
+    background-color: #ff0202;
+}
